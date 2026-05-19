@@ -31,3 +31,38 @@ filterButtons.forEach(button => {
     });
 
 });
+
+// Contact Form Validation
+const form = document.querySelector(".form-container");
+
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const inputs = form.querySelectorAll("input, textarea");
+        let valid = true;
+
+        inputs.forEach(input => {
+
+            if (!input.value.trim()) {
+                valid = false;
+                input.style.border = "2px solid red";
+            }
+            
+            else {
+                input.style.border = "1px solid #ccc";
+            }
+
+        });
+
+        if (!valid) {
+            alert("Please fill all fields correctly");
+            return;
+        }
+
+        alert("Message sent successfully!");
+
+        form.reset();
+
+    });
+
+}
