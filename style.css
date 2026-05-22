@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 *,
 *::after,
@@ -31,6 +31,7 @@ body {
   cursor: pointer;
   margin-top: 1em;
   text-transform: uppercase;
+  font-weight: small;
 }
 
 .btn-primary {
@@ -53,8 +54,9 @@ body {
   width: 100%;
   background: #fff;
   color: #000;
+  opacity: 0.85;
   height: 64px;
-  z-index: 100;
+  z-index: 12;
   box-shadow: 0px 5px 10px 0px #aaa;
 }
 
@@ -73,6 +75,7 @@ body {
 .menu-items li {
   list-style: none;
   margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.6rem;
 }
 
@@ -85,15 +88,17 @@ body {
 
 .menu-items a:hover {
   color: #117964;
+  transition: color 0.3s ease-in-out;
 }
 
 .logo {
   order: 1;
   font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .showcase-area {
-  height: 100vh;
+  height: 50vh;
 
   background:
     linear-gradient(rgba(240, 240, 240, 0.2),
@@ -119,6 +124,7 @@ body {
 .main-title {
   font-size: 5rem;
   text-transform: uppercase;
+  margin-top: 1.5em;
 }
 
 .showcase-container p {
@@ -220,12 +226,14 @@ body {
 .food-container img {
   display: block;
   width: 100%;
-  height: 300px;
+  margin: auto;
+  max-height: 300px;
   object-fit: cover;
   object-position: center;
 }
 
 .img-container {
+  margin: 0 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -244,6 +252,7 @@ body {
   background: rgba(0, 0, 0, 0.85);
 
   opacity: 0;
+  z-index: 1;
 
   transform: scaleY(0);
 
@@ -310,11 +319,12 @@ body {
   border-radius: 30px;
   cursor: pointer;
   font-size: 1.4rem;
-  transition: 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .menu-filter button:hover {
   background: #117964;
+  transform: translateY(-2px);
 }
 
 .menu-filter button.active {
@@ -324,7 +334,7 @@ body {
 .food-menu-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0 30px;
+  padding: 50px 0 30px 0px;
 }
 
 .food-menu-item {
@@ -382,17 +392,16 @@ body {
 .testimonial-container {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
+  font-size: 1.4rem;
+  padding: 1rem;
 }
 
 .testimonial-box {
-  flex: 1 1 250px;
-  background: #fff;
+  
   text-align: center;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+
 }
 
 .customer-photo img {
@@ -586,6 +595,24 @@ body {
 
   .about-wrapper {
     flex-direction: column;
+  }
+
+  .food-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .food-menu-container img {
+    margin: auto;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .contact-img,
+  .form-container {
+    width: 100%;
   }
 
 }
