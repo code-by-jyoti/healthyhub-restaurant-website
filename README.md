@@ -8,7 +8,7 @@ The project focuses on clean UI design, smooth user experience, and essential fr
 
 ## Live Preview
 
-Add deployment link here after deployment.
+[View Live Project] (https://healthyhub-restaurant-website.vercel.app)
 
 ---
 
