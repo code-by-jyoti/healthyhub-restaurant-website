@@ -32,6 +32,36 @@ filterButtons.forEach(button => {
 
 });
 
+// Sticky Navbar Effect
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 80) {
+        navbar.style.background = "#ffffff";
+        navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+    }
+    
+    else {
+        navbar.style.background = "transparent";
+        navbar.style.boxShadow = "none";
+    }
+    
+});
+
+// Mobile Menu Auto Close
+document.querySelectorAll(".menu-items a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        const checkbox = document.getElementById("box");
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+
+    });
+});
+
 // Contact Form Validation
 const form = document.querySelector(".form-container");
 
